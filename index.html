@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Book Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-book-open"></i>
+                <span>Tech Book Library</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="#courses"><i class="fas fa-graduation-cap"></i> Courses</a>
+                <a href="#all-books"><i class="fas fa-book"></i> All Books</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Welcome to <span class="highlight">Tech Book Library</span></h1>
+                <p class="fade-in">Complete collection of computer science textbooks organized by courses. Browse by course or view all books at once.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses">
+        <div class="container">
+            <h2 class="section-title">All Courses</h2>
+            <p class="section-subtitle">Select a course to view its textbooks</p>
+            
+            <div class="courses-grid" id="coursesGrid">
+                <!-- Courses will be loaded dynamically from JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Books by Course Section -->
+    <section id="books-by-course" class="hidden">
+        <div class="container">
+            <div class="books-header">
+                <button id="backToCourses" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Back to Courses
+                </button>
+                <h2 class="section-title" id="courseTitle"></h2>
+            </div>
+            
+            <div class="books-grid" id="booksGrid">
+                <!-- Books will be loaded dynamically from JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- All Books Section -->
+    <section id="all-books" class="hidden">
+        <div class="container">
+            <div class="books-header">
+                <button id="backToAllCourses" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Back to Courses
+                </button>
+                <h2 class="section-title">All Books</h2>
+            </div>
+            
+            <div class="books-grid" id="allBooksGrid">
+                <!-- All books will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-book"></i>
+            <p>Loading Library...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
